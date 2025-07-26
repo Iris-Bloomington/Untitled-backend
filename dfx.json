@@ -1,0 +1,23 @@
+{
+  "canisters": {
+    "greenswap_backend": {
+      "type": "custom",
+      "candid": "src/greenswap_backend/greenswap_backend.did",
+      "wasm": "target/wasm32-unknown-unknown/release/greenswap_backend.wasm",
+      "build": "cargo build --target wasm32-unknown-unknown --release"
+    }
+  },
+  "dfx": "0.15.1",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    }
+  },
+  "defaults": {
+    "build": {
+      "output": "wasm"
+    }
+  }
+}
+
